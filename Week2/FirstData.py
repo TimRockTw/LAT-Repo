@@ -8,14 +8,12 @@ df_106 = pd.read_csv('106.csv')
 df_105 = pd.read_csv('105.csv')
 df_104 = pd.read_csv('104.csv')
 
-df_110
+list_df=[df_110,df_109,df_108,df_107,df_106,df_105,df_104,0]
 
-new_df_110 = df_110.drop(["學校代碼","學校名稱"], axis=1)
-new_df_109 = df_109.drop(["學校代碼","學校名稱"], axis=1)
-new_df_108 = df_108.drop(["學校代碼","學校名稱"], axis=1)
-new_df_107 = df_107.drop(["學校代碼","學校名稱"], axis=1)
-new_df_106 = df_106.drop(["學校代碼","學校名稱"], axis=1)
-new_df_105 = df_105.drop(["學校代碼","學校名稱"], axis=1)
-new_df_104 = df_104.drop(["學校代碼","學校名稱"], axis=1)
+for i in range(len(list_df)-1):
+    list_df[i]=list_df[i].drop(["學校代碼","學校名稱"], axis=1)
+    list_df[i]['year']=110-i
 
-df_110
+list_all=pd.concat([list_df[0],list_df[1],list_df[2],list_df[3],list_df[4],list_df[5],list_df[6]],axis=0)
+res=list_all.groupby('year').sum()
+res
