@@ -1,0 +1,1 @@
+https://data.gov.tw/dataset/33517請針對附錄的104到110學年度的csv資料內的內容提出10個問題並使用pandas語法整理成表格
