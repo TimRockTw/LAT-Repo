@@ -17,3 +17,4 @@ for i in range(len(list_df)-1):
 list_all=pd.concat([list_df[0],list_df[1],list_df[2],list_df[3],list_df[4],list_df[5],list_df[6]],axis=0)
 res=list_all.groupby('year').sum()
 res
+res.to_csv('data.csv', index=False)
