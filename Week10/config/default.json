@@ -1,4 +1,6 @@
 {
     "ENDPOINT":"https://bx9aaf.cognitiveservices.azure.com/",
-    "TEXT_ANALYICS_API_KEY":"41005bbb75eb4d2b9dc81fa6f083e4ef"
+    "TEXT_ANALYICS_API_KEY":"41005bbb75eb4d2b9dc81fa6f083e4ef",
+    "CHANNEL_ACCESS_TOKEN":"8SiBzc1GFPHK/lcN5mhM2htKcp656kyFWbF5gO8+YqrEd7o1tWcKZH8H+itRorSk1d1/q7yyUkdVyMlVrAh3Ok+6m2z9EzM3hduaxyAIPO+DWebiXEobIivxTU4kPcfnWoXaaryIC1vGFJZfaTdm9QdB04t89/1O/w1cDnyilFU=",
+    "CHANNEL_SECRET":"d50ccd681598032c47bd875ae83b04bb"
 }
