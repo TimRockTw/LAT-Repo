@@ -65,9 +65,18 @@ async function MS_TextSentimentAnalysis(thisEvent){
       console.log("Error!!");
     });
 
+    const sentiment = results[0].sentiment;
+    const confidenceScore = results[0].confidenceScores[sentiment];
+  
+    let replyText = `\n情感：${sentiment}\n信心指數：${confidenceScore.toFixed(2)}`;
+  
+    if (newData.opinionText !== "") {
+      replyText += `\n主詞：${newData.opinionText}`;
+    }
+
     const echo = {
       type: 'text',
-      text: results[0].sentiment
+      text: results[0].sentiment+replyText
     };
     return client.replyMessage(thisEvent.replyToken, echo);
 
