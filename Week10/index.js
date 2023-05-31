@@ -30,9 +30,7 @@ async function MS_TextSentimentAnalysis(thisEvent){
     const analyticsClient = new TextAnalyticsClient(endpoint, new AzureKeyCredential(apiKey));
     let documents = [];
     documents.push(thisEvent.message.text);
-    // documents.push("我覺得櫃檯人員很親切");
-    // documents.push("熱水都不熱，爛死了，很生氣！");
-    // documents.push("房間陳設一般般");
+
     const results = await analyticsClient.analyzeSentiment(documents,'zh-Hant',{
       includeOpinionMining:true
     });
