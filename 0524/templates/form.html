@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" value="{{age}}"><br><br>
+            <label for="sex">Sex:</label>
+            <input type="radio" id="sex" name="sex" value="male" {{male}}><label for="male">Male</label>
+            <input type="radio" id="sex" name="sex" value="female" {{female}}><label for="female">Female</label>
+            <br><br>
+            <label for="bmi">BMI:</label>
+            <input type="text" id="bmi" name="bmi" value="{{bmi}}"><br><br>
+            <label for="children">Children:</label>
+            <input type="text" id="children" name="children" value="{{children}}"><br><br>
+            <label for="smoker">Smoker:</label>
+            <input type="radio" id="smoker" name="smoker" value="yes" {{smoker_yes}}><label for="smoker_yes">Yes</label>
+            <input type="radio" id="smoker" name="smoker" value="no" {{smoker_no}}><label for="smoker_no">No</label>
+            <br><br>
+            <label for="region">Region:</label>
+            <select name="region" id="region">
+                <option value="southeast" {{southeast}}>South East</option>
+                <option value="southwest" {{southwest}}>South West</option>
+                <option value="northwest" {{northwest}}>North West</option>
+            </select>
+            <br><br>
+            <input type="submit" value="submit">
+        </form>
+        <br>
+        <div>
+            <p>Predict Medical Cost : {{prediction}}</p> 
+        </div>
+    </body>
+</html>
